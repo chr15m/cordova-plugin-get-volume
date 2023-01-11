@@ -16,9 +16,8 @@
 - (void)getVolume:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-
+    [audioSession setActive:YES error:nil];
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDouble:audioSession.outputVolume];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
