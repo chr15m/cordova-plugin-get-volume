@@ -1,20 +1,12 @@
-# [Cordova Volume Control](https://github.com/mgcrea/cordova-plugin-volume-control) [![Release](https://img.shields.io/npm/v/cordova-volume-control.svg?style=flat)](https://github.com/mgcrea/cordova-plugin-volume-control/releases)
+This plugin is a fork of [cordova-volume-control](https://github.com/mgcrea/cordova-plugin-volume-control) and simply adds a way to get the current device volume on iOS.
 
-This plugin provides a simple way to interact with the volume of your `UIWebView`.
-
-* This plugin uses private `AVSystemController.h` APIs and can't be used for AppStore apps.
-
-* This plugin is built for `cordova@^3.6`.
-
-* This plugin currently supports iOS.
-
+It is used by https://dopeloop.ai pocket operator apps.
 
 ## Plugin setup
 
 Using this plugin requires [Cordova iOS](https://github.com/apache/cordova-ios).
 
-1. `cordova plugin add cordova-volume-control`
-
+1. `cordova plugin add https://github.com/chr15m/cordova-plugin-get-volume`
 
 ## Javascript interface
 
@@ -22,36 +14,14 @@ Using this plugin requires [Cordova iOS](https://github.com/apache/cordova-ios).
     var VolumeControl = cordova.plugins.VolumeControl;
 
     VolumeControl.getVolume(console.log.bind(console));
-    VolumeControl.getCategory(console.log.bind(console));
-    VolumeControl.toggleMute();
-    VolumeControl.isMuted(console.log.bind(console));
-    VolumeControl.setVolume(0.15);
-
-* Check [source](https://github.com/mgcrea/cordova-plugin-volume-control/tree/master/www/VolumeControl.js) for additional configuration.
-
-
-## Communication
-
-- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cordova). (Tag `cordova`)
-- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cordova).
-- If you **found a bug**, open an issue.
-- If you **have a feature request**, open an issue.
-- If you **want to contribute**, submit a pull request.
-
-
-## Contributing
-
-Patches welcome! Send a pull request. Since this is not a part of Cordova Core (which requires a CLA), this should be easier.
-
-Please submit all pull requests the against master branch. If your pull request contains JavaScript patches or features, you should include relevant unit tests. Thanks!
-
 
 ## Authors
 
-**Olivier Louvignes**
+Olivier Louvignes, Chris McCormick.
 
 + http://olouv.com
 + http://github.com/mgcrea
++ https://dopelop.ai
 
 
 ## Copyright and license
